@@ -3,7 +3,7 @@ services:
     lumen:
         build:
             context: .
-            dockerfile: Dockerfile
+            dockerfile: DockerfileDev
         container_name: lumen
         restart: unless-stopped
         working_dir: /var/www/html
