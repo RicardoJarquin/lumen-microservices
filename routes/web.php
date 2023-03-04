@@ -13,6 +13,15 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/authors', 'AuthorController@index');
+$router->post('/authors', 'AuthorController@store');
+$router->get('/authors/{author}', 'AuthorController@show');
+$router->put('/authors/{author}', 'AuthorController@update');
+$router->patch('/authors/{author}', 'AuthorController@update');
+$router->delete('/authors/{author}', 'AuthorController@destroy');
+$router->get('/test', function(){
+//    phpinfo();
+    $test = 123;
+    $test2 = 1231231;
+    dd(123);
 });

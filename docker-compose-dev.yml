@@ -1,10 +1,11 @@
 version: '3.8'
 services:
-    lumen:
+    php:
         build:
             context: .
             dockerfile: DockerfileDev
-        container_name: lumen
+        image: authors-api
+        container_name: authors-api
         restart: unless-stopped
         working_dir: /var/www/html
         volumes:
